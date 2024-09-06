@@ -20,7 +20,7 @@ else:
 encrypted=""
 for message_index in range(0,len(message)):
     if message[message_index] == " ":
-        encrypted+= " "
+        encrypted+= ""
     for alphabet_index in range(0,len(newAlphabet)):
         if message[message_index] == alphabet[alphabet_index]:
             encrypted+= newAlphabet[alphabet_index]
@@ -32,7 +32,7 @@ decrypt = input("Do you want to decrypt this message? Y/N ")
 if decrypt == "Y":
     for dkey in range(len(alphabet)):
         translated = ''
-        for alp in message:
+        for alp in encrypted:
             if alp in alphabet:
                 alpIndex = alphabet.find(alp)
                 translatedIndex = alpIndex - dkey
